@@ -1,0 +1,84 @@
+<p>
+  day2day works!..
+</p>
+
+<div class="mb-20" fxFlex fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px">
+  <div fxFlex class="testsection">
+      <mat-card fxFlexFill fxLayoutAlign="center center">
+          
+         
+        <mat-card>
+        <mat-card-header>
+            <mat-card-title>Form Field</mat-card-title>
+        </mat-card-header>
+        <form>
+          <mat-card-content> 
+
+                <mat-form-field class="inputField">
+
+                        <input type="text" placeholder="Assignee" aria-label="Assignee" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option.name}}
+                          </mat-option>
+                        </mat-autocomplete>
+
+                </mat-form-field>
+
+              <mat-form-field class="inputField">
+                  <input matInput placeholder="Input">
+              </mat-form-field>
+      
+              <mat-form-field  class="inputField">
+                  <textarea matInput placeholder="Textarea"></textarea>
+              </mat-form-field>
+
+
+              
+
+      
+              <mat-form-field  class="inputField">
+                  <mat-select placeholder="Select">
+                      <mat-option value="option">Option</mat-option>
+                  </mat-select>
+              </mat-form-field>
+
+            <mat-form-field  class="inputField">
+                <mat-select placeholder="Select">
+                    <mat-option value="option">Option</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div class="submit_btn">
+                <button  mat-raised-button color="primary" type="submit" >Submit</button>
+            </div>
+            
+
+        </mat-card-content>
+        </form>
+
+        
+          
+      </mat-card>
+ 
+
+
+      </mat-card>
+  </div>
+
+
+
+  <!-- <div fxFlex class="testsection">
+      <mat-card fxFlexFill fxLayoutAlign="center center">
+
+          <div fxFlex="100">
+              <mat-card fxFlexFill fxLayoutAlign="center center">
+                  A
+              </mat-card>
+          </div>
+
+      </mat-card>
+  </div> -->
+</div>
